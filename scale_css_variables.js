@@ -49,3 +49,35 @@
         }
      }
   }
+
+
+  function getCSSVarUnits(docQueryResult,cssVarName) { var retVal = null;
+    //  e.g. "px"
+     var rs = getComputedStyle(docQueryResult);
+     if (rs) {
+        var str = rs.getPropertyValue(cssVarName);
+        if (str && (str.length > 0)) {
+           var patt2 = /[a-zA-Z]/g;
+           var letters_inspec = str.match(patt2).join('');
+           if (letters_inspec)
+             retVal = letters_inspec;
+        }
+     }
+     return retVal;
+  }
+
+  function getCSSVarValue(docQueryResult,cssVarName) { var retVal = null;
+    //  returns a string e.g. "40" , use parseFloat() on result if you want a number
+     var rs = getComputedStyle(docQueryResult);
+     if (rs) {
+        var str = rs.getPropertyValue(cssVarName);
+        if (str && (str.length > 0)) {
+           var patt1 = /[0-9.]/g;
+           var value_inspec = str.match(patt1).join('');
+           if (value_inspec)
+             retVal = value_inspec;
+        }
+     }
+     return retVal;
+  }
+
