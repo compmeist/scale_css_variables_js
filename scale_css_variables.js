@@ -1,8 +1,10 @@
 
   function multiplyCSSVar(docQueryResult,cssVarName,factor,iPrecision) {
     
-    //  docQueryResult is a variable created by a document.querySelector() call
-    // e.g. changes --my-heightvar from 3.6em to 4.12em, depending on factor
+    //  docQueryResult is a variable created by a document.querySelector() call, 
+    //    e.g. var rootcss1 = document.querySelector(':root');
+    
+    //    changes --my-heightvar for example from 3.6em to 4.12em, depending on factor
     //    set iPrecision to zero if you want to round to integers
     
        var rs = getComputedStyle(docQueryResult);
