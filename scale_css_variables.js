@@ -1,7 +1,10 @@
 
   function multiplyCSSVar(docQueryResult,cssVarName,factor,iPrecision) {
+    
+    //  docQueryResult is a variable created by a document.querySelector() call
     // e.g. changes --my-heightvar from 3.6em to 4.12em, depending on factor
     //    set iPrecision to zero if you want to round to integers
+    
        var rs = getComputedStyle(docQueryResult);
      if (rs) {
         var str = rs.getPropertyValue(cssVarName);
@@ -23,8 +26,10 @@
   }
 
   function setCSSVar(docQueryResult,cssVarName,newValue,newUnits) {
+    
     //  if newUnits is omitted, it uses existing units e.g. "px"
     //    css variable must already exist
+    
      var rs = getComputedStyle(docQueryResult);
      if (rs) {
         var str = rs.getPropertyValue(cssVarName);
