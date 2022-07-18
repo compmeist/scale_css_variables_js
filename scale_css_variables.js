@@ -1,5 +1,5 @@
 
-  function multiplyCSSVar(docQueryResult,cssVarName,factor,iPrecision) {
+  function scaleCSSVar(docQueryResult,cssVarName,factor,iPrecision) {
     
     //  docQueryResult is a variable created by a document.querySelector() call, 
     //    e.g. var rootcss1 = document.querySelector(':root');
